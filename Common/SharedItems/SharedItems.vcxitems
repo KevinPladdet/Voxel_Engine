@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{a001fcaf-2399-4412-a986-3e56ae0c15d4}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Game.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\IGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\IInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imconfig.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imstb_rectpack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imstb_textedit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\ImGui-master\imstb_truetype.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\Input.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\stb\stb_image.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\tiny_obj_loader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Assets\Lib\FastNoiseLite.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)audiomanager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)block.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)inventory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)player.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)chunk.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)EBO.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IncludeGraphics.h">
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)mesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)shaderClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sky_renderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)texture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ui_manager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)VAO.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)VBO.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\PCContent\stb_image.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Game.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui_demo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui_draw.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui_tables.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\ImGui-master\imgui_widgets.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\Input.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)audiomanager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)block.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)inventory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)player.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)chunk.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)EBO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)mesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)shaderClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sky_renderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)texture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ui_manager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)VAO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)VBO.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\default.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\default.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\outline.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\outline.vert" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\sky_quad.frag" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Shaders\sky_quad.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Blocks_Atlas.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Hotbar.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Hotbar_Selection.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Hotbar_Selection_Left.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Hotbar_Selection_Right.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Textures\Items_Atlas.png" />
+  </ItemGroup>
+</Project>
