@@ -10,7 +10,7 @@ Sfx and textures are from [Minecraft](https://www.minecraft.net/en-us/about-mine
 
 template is created and provided by BUAS
 
-imgui can be downladed at https://github.com/ocornut/imgui
-miniaudio.h can be downloaded at https://miniaud.io/
-FastNoiseLite.h can be downloaded at https://github.com/Auburn/FastNoiseLite
+imgui can be downladed at https://github.com/ocornut/imgui <br>
+miniaudio.h can be downloaded at https://miniaud.io/ <br>
+FastNoiseLite.h can be downloaded at https://github.com/Auburn/FastNoiseLite <br>
 stb_image.h can be downloaded at https://github.com/nothings/stb/blob/master/stb_image.h 
