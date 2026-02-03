@@ -375,9 +375,6 @@ void Game::ImGUI(float fps)
 	#pragma endregion
 	ImGui::DragFloat("View Distance", &m_player.farPlane, 0.1f, 10.0f, 1000.0f, "%.0f blocks");
 	m_player.farPlane = glm::clamp(m_player.farPlane, 10.0f, 1000.0f);
-	
-	ImGui::SeparatorText("Generation");
-	ImGui::Checkbox("Generate Caves", &m_world.renderCaves);
 
 	ImGui::SeparatorText("Creative");
 	#pragma region Gamemode Switching
@@ -405,7 +402,8 @@ void Game::ImGUI(float fps)
 
 	ImGui::SeparatorText("Other");
 	ImGui::DragFloat("Day Duration", &day_duration, 0.1f, 0.0f, 0.0f, "%.0f seconds");
-
+	ImGui::Checkbox("Generate Caves", &m_world.renderCaves);
+	
 	ImGui::End();
 }
 
