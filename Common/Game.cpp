@@ -327,7 +327,7 @@ void Game::ImGUI(float fps)
 		ImGuiWindowFlags_NoScrollbar |
 		ImGuiWindowFlags_NoScrollWithMouse);
 
-	ImGui::SeparatorText("General");
+	ImGui::SeparatorText("Debug Menu (Toggle with F3)");
 	#pragma region FPS
 	static float fpsGraph[200] = {};
 	static int fpsIndex = 0;
@@ -345,14 +345,16 @@ void Game::ImGUI(float fps)
 	ImGui::SeparatorText("Player");
 	ImGui::DragFloat3("Position", &m_player.playerPos.x);
 	ImGui::BeginDisabled();
-	ImGui::DragFloat("Speed", &m_player.currentSpeed, 0.1f, 0.0f, 0.0f, "%.1f");
 	ImGui::DragInt3("Chunk Position", &m_world.playerChunkPos.x);
-	//ImGui::DragInt3("Looking At", &m_player.lookingAtBlockPos.x);
-	//ImGui::Text("Hotbar Slot: %d", m_inventory.selectedSlot);
+	ImGui::DragFloat("Speed", &m_player.currentSpeed, 0.1f, 0.0f, 0.0f, "%.1f");
 	ImGui::EndDisabled();
+	ImGui::DragFloat("FOV", &m_player.baseFOV, 0.1f, 30.0f, 110.0f, "%.0f");
+	m_player.baseFOV = glm::clamp(m_player.baseFOV, 30.0f, 110.0f);
+	ImGui::Checkbox("xRay", &m_chunk.m_mesh.polygonLines);
 
 	ImGui::SeparatorText("World");
-	ImGui::DragFloat("View Distance", &m_player.farPlane, 0.1f, 0.0f, 0.0f, "%.0f blocks");
+	ImGui::Text("Total Chunks: %d", m_world.totalRenderedChunks);
+	ImGui::Text("Total Vertexes: %d", m_chunk.m_mesh.totalVertexCount);
 	#pragma region RenderDistance
 	ImGui::Text("Render Distance: %d", m_world.renderDistance);
 	ImGui::SameLine();
@@ -371,12 +373,11 @@ void Game::ImGUI(float fps)
 		m_world.renderDistance += 1;
 	}
 	#pragma endregion
-	ImGui::Text("Total Chunks: %d", m_world.totalRenderedChunks);
-	ImGui::Text("Total Vertexes: %d", m_chunk.m_mesh.totalVertexCount);
-	ImGui::Checkbox("Show Polygon Lines", &m_chunk.m_mesh.polygonLines);
+	ImGui::DragFloat("View Distance", &m_player.farPlane, 0.1f, 10.0f, 1000.0f, "%.0f blocks");
+	m_player.farPlane = glm::clamp(m_player.farPlane, 10.0f, 1000.0f);
 	
 	ImGui::SeparatorText("Generation");
-	ImGui::Checkbox("Render Caves", &m_world.renderCaves);
+	ImGui::Checkbox("Generate Caves", &m_world.renderCaves);
 
 	ImGui::SeparatorText("Creative");
 	#pragma region Gamemode Switching
@@ -398,7 +399,7 @@ void Game::ImGUI(float fps)
 	ImGui::Checkbox("Flying", &m_player.isFlying);
 	ImGui::EndDisabled();
 
-	ImGui::SeparatorText("Sounds");
+	ImGui::SeparatorText("Audio");
 	ImGui::SliderFloat("SFX Volume", &m_audiomanager.sfxVolume, 0.0f, 100.0f, "%.0f%%");
 	ImGui::SliderFloat("Music Volume", &m_audiomanager.musicVolume, 0.0f, 100.0f, "%.0f%%");
 
