@@ -1,16 +1,36 @@
-**Voxel_Engine**
+**Voxel Engine**
 
-This project is a minecraft clone (voxel engine) that works on both Windows and on Raspberry Pi4. <br>
-There is a debug menu (toggle with F3) created with ImGui which allows you to enable/disable features and to customize them to your liking.
+In this Minecraft inspired Voxel Engine you can explore an infinite procedurally generated world, including caves, oceans and a dynamic day/night cycle.  
+Project is compatible with both Windows and Raspberry Pi
 
-Everything in SharedItems (/Common/SharedItems) is created by Kevin Pladdet, except for <br>
-miniaudio.h and FastNoiseLite.h
+![Voxel Engine Screenshot](Screenshots/Voxel_Engine_Screenshot.png)
+---
 
-Sfx and textures are from [Minecraft](https://www.minecraft.net/en-us/about-minecraft)
+#### Features
 
-template is created and provided by BUAS
+- Smooth Movement that is identical to Minecraft
+- Place and destroy blocks to build anything you want
+- Fully Functional Hotbar
+- Game Modes: Survival and Creative
+- Procedural Cave System
+- Day and Night Cycle
+- Oceans
+- Transparent blocks like Glass and Water
+- Background Music and SFX
+- A broad ImGui Debug Menu that allows you to tweak features in real time
+- Compatible on both Windows and the Raspberry Pi
 
-imgui can be downladed at https://github.com/ocornut/imgui <br>
-miniaudio.h can be downloaded at https://miniaud.io/ <br>
-FastNoiseLite.h can be downloaded at https://github.com/Auburn/FastNoiseLite <br>
-stb_image.h can be downloaded at https://github.com/nothings/stb/blob/master/stb_image.h 
+#### Credits
+
+Everything in SharedItems (/Common/SharedItems) is created by Kevin Pladdet, except miniaudio.h and FastNoiseLite.h
+
+SFX and Textures are from [Minecraft](https://www.minecraft.net/en-us/about-minecraft)
+
+Template is created and provided by BUAS
+
+#### Dependencies
+
+imgui can be downladed at https://github.com/ocornut/imgui  
+miniaudio.h can be downloaded at https://miniaud.io/  
+FastNoiseLite.h can be downloaded at https://github.com/Auburn/FastNoiseLite  
+stb_image.h can be downloaded at https://github.com/nothings/stb/blob/master/stb_image.h
