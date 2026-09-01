@@ -20,6 +20,8 @@ Project is compatible with both Windows and Raspberry Pi
 - A broad ImGui Debug Menu that allows you to tweak features in real time
 - Compatible on both Windows and the Raspberry Pi
 
+---
+
 #### Credits
 
 Everything in SharedItems (/Common/SharedItems) is created by Kevin Pladdet, except miniaudio.h and FastNoiseLite.h
@@ -27,6 +29,8 @@ Everything in SharedItems (/Common/SharedItems) is created by Kevin Pladdet, exc
 SFX and Textures are from [Minecraft](https://www.minecraft.net/en-us/about-minecraft)
 
 Template is created and provided by BUAS
+
+---
 
 #### Dependencies
 
