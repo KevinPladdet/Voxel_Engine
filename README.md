@@ -28,7 +28,7 @@ Everything in SharedItems (/Common/SharedItems) is created by Kevin Pladdet, exc
 
 SFX and Textures are from [Minecraft](https://www.minecraft.net/en-us/about-minecraft)
 
-Template is created and provided by BUAS
+Template is created and provided by BUas
 
 ---
 
